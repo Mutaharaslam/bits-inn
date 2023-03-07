@@ -1,0 +1,124 @@
+.banner-wrapper {
+    background: url("../assets/images/main-banner.png") no-repeat;
+    background-color: rgba($secondary, 1);
+    background-size: cover;
+    background-position: top center;
+    // min-height: 100vh;
+    position: relative;
+    z-index: 3;
+    h1 {
+        background: -webkit-linear-gradient(#55524e, #FE145A);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    .banner-content {
+        position: relative;
+        .btn-chat {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+        }
+    }
+    &.platform {
+        background: url("../assets/platform-banner.png") no-repeat;
+        background-position: right top;
+        background-size: 100%;
+        min-height: 500px;
+    }
+}
+
+.clients-section {
+    background-color: rgba($secondary, 0.1);
+}
+
+.info-section {
+    padding: 100px 0 80px;
+    .row {
+        align-items: center;
+        justify-content: space-between;
+    }
+    &.goals-section {
+        background: url("../../assets/images/goals-bg-img.png") no-repeat;
+        .nav {
+            border-bottom: none;
+            margin-bottom: 40px;
+            .nav-item {
+                .nav-link {
+                    color: rgba($dark, 0.7);
+                    font-weight: 700;
+                    position: relative;
+                    padding: 10px 0;
+                    margin: 0 15px;
+                    &.active,
+                    &:hover {
+                        color: rgba($dark, 1);
+                        background-color: transparent;
+                        border-color: transparent;
+                        &::after {
+                            opacity: 1;
+                            width: 100%;
+                            @include tabletOnly {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        width: 0%;
+                        height: 4px;
+                        background-color: #FE095C;
+                        border-radius: 5px;
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        bottom: 0;
+                        opacity: 0;
+                        transition: 0.5s all;
+                        @include tabletOnly {
+                            left: 0;
+                            transform: translateX(0%);
+                        }
+                    }
+                }
+            }
+        }
+        .tab-content {
+            padding: 0 15px;
+            h1 {
+                color: rgba($dark, 1);
+                padding: 0;
+                &::after {
+                    display: none;
+                }
+            }
+            .desc {
+                font-size: 20px;
+                line-height: 1.2;
+                color: rgba($dark, 1);
+            }
+        }
+    }
+    &.platform-section {
+        background-color: #FFFFFF;
+        background-image: url("../../assets/images/platform_bg.png");
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
+        min-height: 400px;
+        h1 {
+            background: -webkit-linear-gradient(#FCB333, #FE145A);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+    &.lets-talk {
+        background-color: #FCB333;
+        background-image: url("../../assets/images/platform_bg.png");
+        background-repeat: repeat;
+        background-position: left center;
+        background-size: contain;
+        min-height: 400px;
+    }
+}

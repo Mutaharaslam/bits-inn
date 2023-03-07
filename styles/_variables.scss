@@ -1,0 +1,246 @@
+// Colors
+$primary: #9bad29 !default;
+$secondary: #262b4f !default;
+$success: #00C424 !default;
+$info: #0094ba !default;
+$warning: #FCB333 !default;
+$danger: #ce0505 !default;
+$purple: #6f42c1 !default;
+$dark: #2A2A2A !default;
+$medium: #292929 !default;
+$light: #707070;
+$white: #fff !default;
+$black: #000 !default;
+// media Queries Vars
+$breakpoint-phone-xs: 375px;
+$breakpoint-phone-sm: 480px;
+$breakpoint-phone-md: 567px;
+$breakpoint-phone: 768px;
+$breakpoint-tablet: 992px;
+$breakpoint-desktop-sm: 1080px;
+$breakpoint-desktop: 1200px;
+$breakpoint-desktop-lg: 1440px;
+//  Breakout mixins
+@mixin desktopLgOnly {
+    @media screen and (max-width: $breakpoint-desktop-lg) {
+        @content;
+    }
+}
+
+@mixin desktopLg {
+    @media screen and (min-width: $breakpoint-desktop-lg) {
+        @content;
+    }
+}
+
+@mixin desktopOnly {
+    @media screen and (max-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin desktopSmOnly {
+    @media screen and (max-width: $breakpoint-desktop-sm) {
+        @content;
+    }
+}
+
+@mixin desktopSm {
+    @media screen and (min-width: $breakpoint-desktop-sm) {
+        @content;
+    }
+}
+
+@mixin tabletOnly {
+    @media screen and (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin phoneOnly {
+    @media screen and (max-width: $breakpoint-phone) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (min-width: $breakpoint-phone) {
+        @content;
+    }
+}
+
+@mixin phoneMdOnly {
+    @media screen and (max-width: $breakpoint-phone-md) {
+        @content;
+    }
+}
+
+@mixin phoneMd {
+    @media screen and (min-width: $breakpoint-phone-md) {
+        @content;
+    }
+}
+
+@mixin phoneSmOnly {
+    @media screen and (max-width: $breakpoint-phone-sm) {
+        @content;
+    }
+}
+
+@mixin phoneSm {
+    @media screen and (min-width: $breakpoint-phone-sm) {
+        @content;
+    }
+}
+
+@mixin phoneXsOnly {
+    @media screen and (max-width: $breakpoint-phone-xs) {
+        @content;
+    }
+}
+
+@mixin phoneXs {
+    @media screen and (min-width: $breakpoint-phone-xs) {
+        @content;
+    }
+}
+
+// 
+// Spacers
+$spacer: 1rem !default;
+$spacers: ( 0: 0, 1: $spacer * .25, 2: $spacer * .5, 3: $spacer, 4: $spacer * 1.5, 5: $spacer * 2.2, 6: $spacer * 3, 7: $spacer * 3.8) !default;
+//grid-breakpoints
+$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px) !default;
+//
+//  container-max-widths
+$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1320px) !default;
+//
+// Set the number of columns and specify the width of the gutters.
+$grid-columns: 12 !default;
+$grid-row-columns: 6 !default;
+// 
+$grid-gutter-width: 1.5rem;
+$gutters: ( 0: 0, half: $spacer * 0.5, 1: $spacer * 1, 2: $spacer * 2, 3: $spacer * 3, 4: $spacer * 4, 5: $spacer * 5, );
+// 
+// TypoGraphy
+$font-family-base: "Lato";
+$font-size-root: 16px !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * .875 !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+$font-weight-base: 400 !default;
+$line-height-base: 1.4 !default;
+$line-height-sm: 1.25 !default;
+$line-height-lg: 2 !default;
+// 
+$h1-font-size: $font-size-base * 2.5 !default;
+$h2-font-size: $font-size-base * 2 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.25 !default;
+$h6-font-size: $font-size-base !default;
+// 
+// 
+// Buttons
+$btn-padding-y: 10px;
+$btn-padding-x: $spacer;
+$btn-line-height: 1;
+$btn-white-space: null; // Set to `nowrap` to prevent text wrapping
+$btn-border-width: 1px;
+$btn-font-weight: 400;
+$btn-box-shadow: inset 0 1px 0 rgba($white, .15),
+0 1px 1px rgba($black, .075);
+$btn-focus-width: 0;
+$btn-focus-box-shadow: none;
+$btn-disabled-opacity: .65;
+$btn-active-box-shadow: inset 0 3px 5px rgba($black, .125);
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius: 5px;
+$btn-border-radius-sm: 5px;
+$btn-border-radius-lg: 5px;
+$btn-transition: color .15s ease-in-out,
+background-color .15s ease-in-out,
+border-color .15s ease-in-out,
+box-shadow .15s ease-in-out;
+// 
+// 
+// Select
+$form-select-padding-y: 1rem;
+$form-select-padding-x: 1.2rem;
+$form-select-font-size: 1rem;
+// 
+$form-select-padding-y-sm: 0.3rem;
+$form-select-padding-x-sm: 0.4rem;
+$form-select-font-size-sm: 0.9rem;
+$form-select-border-radius-sm: 2px;
+// 
+$form-select-indicator-padding: $form-select-padding-x-sm * 1; // Extra padding for background-image
+$form-select-font-weight: 400;
+$form-select-line-height: 1;
+$form-select-color: rgba($dark, 0.7);
+$form-select-bg: $white;
+$form-select-disabled-color: null;
+$form-select-bg-position: right $form-select-padding-x-sm center;
+$form-select-bg-size: 16px 12px; // In pixels because image dimensions
+$form-select-indicator-color: $dark;
+$form-select-border-width: 1px;
+$form-select-border-color: rgba($dark, 0.2);
+$form-select-border-radius: 2px;
+$form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#{$form-select-indicator-color}' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>");
+// 
+// 
+// Input
+$input-padding-y :1rem;
+$input-padding-x: 1.2rem;
+$input-font-size: 1rem;
+$input-font-weight: 400;
+$input-line-height: 1;
+$input-bg: $white;
+$input-color: rgba($dark,
+0.7);
+$input-border-color: rgba($dark,
+0.2);
+$input-border-width: 1px;
+$input-border-radius: 2px;
+// 
+//  
+// CheckBox 
+$form-check-input-bg: $white;
+$form-check-input-border: 1px solid rgba($dark,
+.25);
+$form-check-input-border-radius: 4px;
+// 
+$form-check-input-checked-color: $secondary;
+$form-check-input-checked-bg-color: $white;
+$form-check-input-checked-border-color: $dark;
+// 
+// 
+// FLoating Label Form
+$form-floating-height: 3.5rem;
+$form-floating-line-height: 1.25;
+$form-floating-input-padding-t: 1.625rem;
+$form-floating-input-padding-b: .625rem;
+$form-floating-padding-x: 1rem;
+$form-floating-padding-y: 1rem;
+$form-floating-label-opacity: 1;
+$form-floating-label-transform: none;
+$form-floating-label-transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+$form-floating-transition: opacity .1s ease-in-out,
+transform .1s ease-in-out;

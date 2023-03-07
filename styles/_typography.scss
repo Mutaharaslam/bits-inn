@@ -1,0 +1,99 @@
+// Font sizes
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+    margin: 0 0;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 16px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+
+h3 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+h4 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h6 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-20 {
+    font-size: 20px;
+}
+
+.text-18 {
+    font-size: 18px;
+}
+
+.text-16 {
+    font-size: 16px;
+}
+
+.text-15 {
+    font-size: 15px;
+}
+
+.text-14 {
+    font-size: 14px;
+}
+
+.text-13 {
+    font-size: 13px;
+}
+
+.text-12 {
+    font-size: 12px;
+}
+
+// Font weight
+.fw-bolder {
+    font-weight: 900 !important;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.fw-semi-bold {
+    font-weight: 600;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.fw-normal {
+    font-weight: 400 !important;
+}
+
+.fw-light {
+    font-weight: 300 !important;
+}

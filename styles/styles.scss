@@ -1,0 +1,13 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+// Custom
+@import "variables";
+@import "typography";
+@import "font";
+@import "common.scss";
+// 
+// Components
+@import "components/header";
+@import "components/footer";
+// pages
+@import "home";

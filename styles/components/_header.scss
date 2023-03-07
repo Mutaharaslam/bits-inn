@@ -1,0 +1,147 @@
+$navbar-padding-y: $spacer * .5;
+$navbar-padding-x: null;
+$navbar-nav-link-padding-x: 1rem;
+$navbar-brand-margin-end: 1rem;
+$navbar-toggler-padding-y: .25rem;
+$navbar-toggler-padding-x: .75rem;
+$navbar-toggler-font-size: $font-size-lg;
+$navbar-toggler-transition: box-shadow .15s ease-in-out;
+.navbar {
+    .navbar-brand {
+        img {
+            max-width: 170px;
+            width: 100%;
+            @include phoneSmOnly {
+                max-width: 150px;
+            }
+            @include phoneXsOnly {
+                max-width: 140px;
+            }
+        }
+    }
+    ul.navbar-nav {
+        .nav-item {
+            .nav-link {
+                position: relative;
+                font-size: 1rem;
+                text-transform: capitalize;
+                color: $white;
+                padding-right: 1rem;
+                padding-left: 1rem;
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                        width: 60%;
+                        @include tabletOnly {
+                            width: 100%;
+                        }
+                    }
+                }
+                &::after {
+                    content: "";
+                    width: 0%;
+                    height: 3px;
+                    background-color: $warning;
+                    border-radius: 5px;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    bottom: 0;
+                    opacity: 0;
+                    transition: 0.5s all;
+                    @include tabletOnly {
+                        left: 0;
+                        transform: translateX(0%);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .header-wrapper {
+//     background-color: rgba($secondary, 1);
+//     position: relative;
+//     left: 0;
+//     right: 0;
+//     z-index: 99;
+//     &.home {
+//         background-color: rgba($secondary, 0.6);
+//         position: absolute;
+//     }
+//     .sub-header {
+//         border-bottom: 1px solid rgba($light, 0.4);
+//         .address,
+//         .headerEmail,
+//         .tel {
+//             display: flex;
+//             align-items: center;
+//             color: $light;
+//             span {
+//                 font-size: 1rem;
+//             }
+//             i {
+//                 display: inline-block;
+//                 margin-right: 5px;
+//                 font-size: 18px;
+//             }
+//         }
+//         .right-side {
+//             display: flex;
+//             justify-content: space-between;
+//             @include tablet {
+//                 justify-content: space-between;
+//             }
+//             .social-icons {
+//                 display: flex;
+//                 align-items: center;
+//                 margin-right: 10px;
+//                 color: $light;
+//                 i {
+//                     margin: 0 5px;
+//                     font-size: 25px;
+//                 }
+//             }
+//             .Lang-flags {
+//                 span {
+//                     width: 30px;
+//                     height: auto;
+//                     margin: 0 5px;
+//                 }
+//             }
+//         }
+//     }
+//     .main-navbar {
+//         .authProfileBtns {
+//             @include tabletOnly {
+//                 justify-content: flex-end;
+//             }
+//         }
+//         .loggedInUser {
+//             display: flex;
+//             align-items: center;
+//             justify-content: flex-start;
+//             position: relative;
+//             .avatar-img {
+//                 width: 60px;
+//                 height: 60px;
+//                 border-radius: 50%;
+//                 overflow: hidden;
+//                 img {
+//                     width: 100%;
+//                     height: 100%;
+//                     object-fit: cover;
+//                 }
+//             }
+//             .dropdown-menu {
+//                 min-width: 12.5rem;
+//                 padding: 5px 0;
+//                 li {
+//                     a {
+//                         padding: 5px 1rem;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }

@@ -1,0 +1,110 @@
+$breakpoint-phone-xs: 375px;
+$breakpoint-phone-sm: 480px;
+$breakpoint-phone-md: 567px;
+$breakpoint-phone: 767px;
+$breakpoint-tablet: 992px;
+$breakpoint-desktop-sm: 1080px;
+$breakpoint-desktop: 1200px;
+$breakpoint-desktop-lg: 1440px;
+//Default font size on html element is 100%, equivalent to 16px;
+@function calculateRem($size) {
+    $remSize: $size / 18px;
+    @return #{$remSize}rem;
+}
+
+//  Breakout mixins
+@mixin desktopLgOnly {
+    @media screen and (max-width: $breakpoint-desktop-lg) {
+        @content;
+    }
+}
+
+@mixin desktopLg {
+    @media screen and (min-width: $breakpoint-desktop-lg) {
+        @content;
+    }
+}
+
+@mixin desktopOnly {
+    @media screen and (max-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: $breakpoint-desktop) {
+        @content;
+    }
+}
+
+@mixin desktopSmOnly {
+    @media screen and (max-width: $breakpoint-desktop-sm) {
+        @content;
+    }
+}
+
+@mixin desktopSm {
+    @media screen and (min-width: $breakpoint-desktop-sm) {
+        @content;
+    }
+}
+
+@mixin tabletOnly {
+    @media screen and (max-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin phoneOnly {
+    @media screen and (max-width: $breakpoint-phone) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (min-width: $breakpoint-phone) {
+        @content;
+    }
+}
+
+@mixin phoneMdOnly {
+    @media screen and (max-width: $breakpoint-phone-md) {
+        @content;
+    }
+}
+
+@mixin phoneMd {
+    @media screen and (min-width: $breakpoint-phone-md) {
+        @content;
+    }
+}
+
+@mixin phoneSmOnly {
+    @media screen and (max-width: $breakpoint-phone-sm) {
+        @content;
+    }
+}
+
+@mixin phoneSm {
+    @media screen and (min-width: $breakpoint-phone-sm) {
+        @content;
+    }
+}
+
+@mixin phoneXsOnly {
+    @media screen and (max-width: $breakpoint-phone-xs) {
+        @content;
+    }
+}
+
+@mixin phoneXs {
+    @media screen and (min-width: $breakpoint-phone-xs) {
+        @content;
+    }
+}
