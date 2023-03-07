@@ -1,30 +1,70 @@
 .banner-wrapper {
-    background: url("../assets/images/main-banner.png") no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../assets/images/main-banner1.png") no-repeat;
     background-color: rgba($secondary, 1);
     background-size: cover;
     background-position: top center;
-    // min-height: 100vh;
     position: relative;
     z-index: 3;
-    h1 {
-        background: -webkit-linear-gradient(#55524e, #FE145A);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-    .banner-content {
-        position: relative;
-        .btn-chat {
-            position: absolute;
-            bottom: 15px;
-            right: 15px;
+    min-height: 590px;
+
+    .banner-heading {
+        padding-top: 5rem;
+        padding-left: 3rem;
+        @include desktopOnly{
+            padding-top: 5rem;
+            padding-left: 3rem;
+        }
+        @include desktopSmOnly{
+            padding-top: 5rem;
+            padding-left: 3rem;
         }
     }
-    &.platform {
-        background: url("../assets/platform-banner.png") no-repeat;
-        background-position: right top;
-        background-size: 100%;
-        min-height: 500px;
+
+    .banner-inner-imgs {
+        position: absolute;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 0 0 auto;
+        right: 30px;
+        top: -90px;
+        width: 32%;
+        transform: translateY(0);
+        @include desktopOnly{
+            right: 20px;
+            top: 30%;
+            transform: translateY(-30%);
+            width: 38%;
+        }
+        @include desktopSmOnly{
+            right: 10px;
+            top: auto;
+            bottom: 10px;
+            transform: translateY(0);
+            width: 42%;
+        }
+        @include phoneOnly{
+            width: 60%;
+        }
+        @include phoneMdOnly{
+            width: 70%;
+        }
+        
+        
+        .img1 {
+            position: relative;
+        }
+
+        .img2 {
+            position: absolute;
+            top: 40%;
+            left: calc(-40% + 30px);
+            z-index: 33;
+            width: 70%;
+            @include desktopSmOnly{
+                top: -40%;
+            }
+        }
     }
 }
 
@@ -34,15 +74,19 @@
 
 .info-section {
     padding: 100px 0 80px;
+
     .row {
         align-items: center;
         justify-content: space-between;
     }
+
     &.goals-section {
         background: url("../../assets/images/goals-bg-img.png") no-repeat;
+
         .nav {
             border-bottom: none;
             margin-bottom: 40px;
+
             .nav-item {
                 .nav-link {
                     color: rgba($dark, 0.7);
@@ -50,19 +94,23 @@
                     position: relative;
                     padding: 10px 0;
                     margin: 0 15px;
+
                     &.active,
                     &:hover {
                         color: rgba($dark, 1);
                         background-color: transparent;
                         border-color: transparent;
+
                         &::after {
                             opacity: 1;
                             width: 100%;
+
                             @include tabletOnly {
                                 width: 100%;
                             }
                         }
                     }
+
                     &::after {
                         content: "";
                         width: 0%;
@@ -75,6 +123,7 @@
                         bottom: 0;
                         opacity: 0;
                         transition: 0.5s all;
+
                         @include tabletOnly {
                             left: 0;
                             transform: translateX(0%);
@@ -83,15 +132,19 @@
                 }
             }
         }
+
         .tab-content {
             padding: 0 15px;
+
             h1 {
                 color: rgba($dark, 1);
                 padding: 0;
+
                 &::after {
                     display: none;
                 }
             }
+
             .desc {
                 font-size: 20px;
                 line-height: 1.2;
@@ -99,6 +152,7 @@
             }
         }
     }
+
     &.platform-section {
         background-color: #FFFFFF;
         background-image: url("../../assets/images/platform_bg.png");
@@ -106,6 +160,7 @@
         background-position: left center;
         background-size: contain;
         min-height: 400px;
+
         h1 {
             background: -webkit-linear-gradient(#FCB333, #FE145A);
             -webkit-background-clip: text;
@@ -113,6 +168,7 @@
             background-clip: text;
         }
     }
+
     &.lets-talk {
         background-color: #FCB333;
         background-image: url("../../assets/images/platform_bg.png");

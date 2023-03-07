@@ -1,16 +1,16 @@
 // Colors
-$primary: #9bad29 !default;
-$secondary: #262b4f !default;
-$success: #00C424 !default;
-$info: #0094ba !default;
-$warning: #FCB333 !default;
-$danger: #ce0505 !default;
-$purple: #6f42c1 !default;
-$dark: #2A2A2A !default;
-$medium: #292929 !default;
-$light: #707070;
-$white: #fff !default;
-$black: #000 !default;
+$primary: #636466;
+$secondary: #262b4f;
+$success: #00C424;
+$info: #0094ba;
+$warning: #FCB333;
+$danger: #EA1C24;
+$purple: #6f42c1;
+$dark: #2A2A2A;
+$medium: #292929;
+$light: #F1F1F1;
+$white: #fff;
+$black: #000;
 // media Queries Vars
 $breakpoint-phone-xs: 375px;
 $breakpoint-phone-sm: 480px;
@@ -20,6 +20,7 @@ $breakpoint-tablet: 992px;
 $breakpoint-desktop-sm: 1080px;
 $breakpoint-desktop: 1200px;
 $breakpoint-desktop-lg: 1440px;
+
 //  Breakout mixins
 @mixin desktopLgOnly {
     @media screen and (max-width: $breakpoint-desktop-lg) {
@@ -119,45 +120,90 @@ $breakpoint-desktop-lg: 1440px;
 
 // 
 // Spacers
-$spacer: 1rem !default;
-$spacers: ( 0: 0, 1: $spacer * .25, 2: $spacer * .5, 3: $spacer, 4: $spacer * 1.5, 5: $spacer * 2.2, 6: $spacer * 3, 7: $spacer * 3.8) !default;
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 2.2,
+    6: $spacer * 3,
+    7: $spacer * 3.8
+);
 //grid-breakpoints
-$grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px) !default;
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
 //
 //  container-max-widths
-$container-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1320px) !default;
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+);
 //
 // Set the number of columns and specify the width of the gutters.
-$grid-columns: 12 !default;
-$grid-row-columns: 6 !default;
+$grid-columns: 12;
+$grid-row-columns: 6;
 // 
 $grid-gutter-width: 1.5rem;
-$gutters: ( 0: 0, half: $spacer * 0.5, 1: $spacer * 1, 2: $spacer * 2, 3: $spacer * 3, 4: $spacer * 4, 5: $spacer * 5, );
+$gutters: (
+    0: 0,
+    half: $spacer * 0.5,
+    1: $spacer * 1,
+    2: $spacer * 2,
+    3: $spacer * 3,
+    4: $spacer * 4,
+    5: $spacer * 5,
+);
 // 
+
 // TypoGraphy
-$font-family-base: "Lato";
-$font-size-root: 16px !default;
-$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm: $font-size-base * .875 !default;
-$font-size-lg: $font-size-base * 1.25 !default;
-$font-weight-lighter: lighter !default;
-$font-weight-light: 300 !default;
-$font-weight-normal: 400 !default;
-$font-weight-bold: 700 !default;
-$font-weight-bolder: bolder !default;
-$font-weight-base: 400 !default;
-$line-height-base: 1.4 !default;
-$line-height-sm: 1.25 !default;
-$line-height-lg: 2 !default;
+$font-family-base: "Jura";
+$font-size-root: 16px;
+$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-sm: $font-size-base * .875;
+$font-size-lg: $font-size-base * 1.25;
+$font-weight-lighter: lighter;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-bolder: bolder;
+$font-weight-base: 400;
+$line-height-base: 1.4;
+$line-height-sm: 1.25;
+$line-height-lg: 2;
 // 
-$h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
-$h3-font-size: $font-size-base * 1.75 !default;
-$h4-font-size: $font-size-base * 1.5 !default;
-$h5-font-size: $font-size-base * 1.25 !default;
-$h6-font-size: $font-size-base !default;
+$h1-font-size: $font-size-base * 3.5;
+$h2-font-size: $font-size-base * 2.5;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
 // 
+
+// Settings for the `<body>` element.
+$body-bg:                   $white;
+$body-color:                $primary ;
+$body-text-align:           left;
 // 
+$link-color: $primary;
+$link-decoration: none;
+$link-shade-percentage: 20%;
+$link-hover-color: shift-color($link-color, $link-shade-percentage);
+$link-hover-decoration: null;
+$stretched-link-pseudo-element: after;
+$stretched-link-z-index: 1;
+
+
 // Buttons
 $btn-padding-y: 10px;
 $btn-padding-x: $spacer;
@@ -166,7 +212,7 @@ $btn-white-space: null; // Set to `nowrap` to prevent text wrapping
 $btn-border-width: 1px;
 $btn-font-weight: 400;
 $btn-box-shadow: inset 0 1px 0 rgba($white, .15),
-0 1px 1px rgba($black, .075);
+    0 1px 1px rgba($black, .075);
 $btn-focus-width: 0;
 $btn-focus-box-shadow: none;
 $btn-disabled-opacity: .65;
@@ -176,9 +222,9 @@ $btn-border-radius: 5px;
 $btn-border-radius-sm: 5px;
 $btn-border-radius-lg: 5px;
 $btn-transition: color .15s ease-in-out,
-background-color .15s ease-in-out,
-border-color .15s ease-in-out,
-box-shadow .15s ease-in-out;
+    background-color .15s ease-in-out,
+    border-color .15s ease-in-out,
+    box-shadow .15s ease-in-out;
 // 
 // 
 // Select
@@ -214,9 +260,9 @@ $input-font-weight: 400;
 $input-line-height: 1;
 $input-bg: $white;
 $input-color: rgba($dark,
-0.7);
+        0.7);
 $input-border-color: rgba($dark,
-0.2);
+        0.2);
 $input-border-width: 1px;
 $input-border-radius: 2px;
 // 
@@ -224,7 +270,7 @@ $input-border-radius: 2px;
 // CheckBox 
 $form-check-input-bg: $white;
 $form-check-input-border: 1px solid rgba($dark,
-.25);
+        .25);
 $form-check-input-border-radius: 4px;
 // 
 $form-check-input-checked-color: $secondary;
@@ -243,4 +289,4 @@ $form-floating-label-opacity: 1;
 $form-floating-label-transform: none;
 $form-floating-label-transform: scale(.85) translateY(-.5rem) translateX(.15rem);
 $form-floating-transition: opacity .1s ease-in-out,
-transform .1s ease-in-out;
+    transform .1s ease-in-out;

@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
+
+// Variable OverRides
+@import "variables";
+
+// Bootstrap Import
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
 // Custom
-@import "variables";
 @import "typography";
-@import "font";
 @import "common.scss";
-// 
+
 // Components
 @import "components/header";
 @import "components/footer";
+
 // pages
 @import "home";
