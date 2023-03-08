@@ -7,7 +7,7 @@ $warning: #FCB333;
 $danger: #EA1C24;
 $purple: #6f42c1;
 $dark: #2A2A2A;
-$medium: #292929;
+$medium: #636466;
 $light: #F1F1F1;
 $white: #fff;
 $black: #000;
@@ -19,7 +19,7 @@ $breakpoint-phone: 768px;
 $breakpoint-tablet: 992px;
 $breakpoint-desktop-sm: 1080px;
 $breakpoint-desktop: 1200px;
-$breakpoint-desktop-lg: 1440px;
+$breakpoint-desktop-lg: 1400px;
 
 //  Breakout mixins
 @mixin desktopLgOnly {
@@ -259,23 +259,11 @@ $input-font-size: 1rem;
 $input-font-weight: 400;
 $input-line-height: 1;
 $input-bg: $white;
-$input-color: rgba($dark,
-        0.7);
-$input-border-color: rgba($dark,
-        0.2);
+$input-color: rgba($dark,0.7);
+$input-border-color: rgba($dark, 0.6);
 $input-border-width: 1px;
-$input-border-radius: 2px;
-// 
-//  
-// CheckBox 
-$form-check-input-bg: $white;
-$form-check-input-border: 1px solid rgba($dark,
-        .25);
-$form-check-input-border-radius: 4px;
-// 
-$form-check-input-checked-color: $secondary;
-$form-check-input-checked-bg-color: $white;
-$form-check-input-checked-border-color: $dark;
+$input-border-radius:  0.6rem;
+$input-placeholder-color: rgba($black, 1);
 // 
 // 
 // FLoating Label Form
@@ -286,7 +274,7 @@ $form-floating-input-padding-b: .625rem;
 $form-floating-padding-x: 1rem;
 $form-floating-padding-y: 1rem;
 $form-floating-label-opacity: 1;
-$form-floating-label-transform: none;
-$form-floating-label-transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+$form-floating-label-transform: 1;
+$form-floating-label-transform: scale(.85) translateY(-.5rem) translateX(1rem);
 $form-floating-transition: opacity .1s ease-in-out,
     transform .1s ease-in-out;

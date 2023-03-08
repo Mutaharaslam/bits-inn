@@ -6,163 +6,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script language="javascript" type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script language="javascript" type="text/javascript"
+        src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
     <!-- Header -->
-    <header class="container mb-5 pt-5 pb-3">
-        <div class="row">
-            <div class="col">
+    <header class="container mb-5 pt-5 pb-md-3">
+        <div class="row justify-content-md-start justify-content-center">
+            <div class="col-md-4 col-6">
                 <img class="img-fluid" src="assets/images/logo.png" alt="">
             </div>
-            
+
         </div>
     </header>
 
-      <!-- banner wrapper -->
-      <section class="banner-wrapper container rounded-0 rounded-lg-5 position-relative">
+    <!-- banner wrapper -->
+    <section class="banner-wrapper container position-relative shadow-lg">
         <div class="row">
             <!-- Banner -->
             <h2 class="fw-bold banner-heading text-white">YOUR ESCAPE TO <br> UNPARALLELED COMFORT</h2>
             <div class="banner-inner-imgs">
                 <img src="assets/images/landing top-right1.png" alt="" class="img2 img-fluid">
                 <img src="assets/images/landing top-right2.png" alt="" class="img1 img-fluid">
-                
+
+            </div>
+        </div>
+    </section>
+    <section class="container banner-form">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-sm-11 col-12">
+                <div class="form-holder shadow-lg d-flex justify-content-center">
+                    <form class="row col-lg-9 col-md-10 col-sm-11 col-12 justify-content-center">
+                        <div class="col-md-6 col-12 mb-4">
+                            <label for="name" class="form-label visually-hidden">Name</label>
+                            <input type="text" class="form-control" placeholder="Name" id="name"
+                                aria-describedby="nameHelp">
+                        </div>
+                        <div class="col-md-6 col-12 mb-4">
+                            <label for="email" class="form-label visually-hidden">Email</label>
+                            <input type="email" placeholder="Email" class="form-control" id="email"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <div class=" form-floating col-md-6 col-12 mb-4">
+                            <input type="date" class="form-control" id="floatingInput" placeholder="dd/mm/yyy">
+                            <label class="form-label" for="floatingInput">From</label>
+                        </div>
+                        <div class=" form-floating col-md-6 col-12 mb-4">
+                            <input type="date" class="form-control" id="floatingPassword" placeholder="dd/mm/yyy">
+                            <label class="form-label" for="floatingPassword">To</label>
+                        </div>
+                        <div class="col-md-6 col-12 mb-4">
+                            <label for="people" class="form-label visually-hidden">People</label>
+                            <input type="text" class="form-control" placeholder="People" id="people"
+                                aria-describedby="nameHelp">
+                        </div>
+                        <div class="col-md-6 col-12 mb-4">
+                            <label for="rooms" class="form-label visually-hidden">Rooms</label>
+                            <input type="text" placeholder="Rooms" class="form-control" id="rooms"
+                                aria-describedby="emailHelp">
+                        </div>
+                        <button type="submit"
+                            class=" btn-sumbit btn btn-danger border-0 btn-lg p-3 text-white">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
-
-
-
-
-    <section class="info-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <h1 class="underline-heading">Faster than anything you've seen, at data-lake scale</h1>
-                    <p class="grey-desc">Deliver sub-second and highly concurrent analytics experiences over big and granular data, fueled by Baltoro's storage and compute-optimized technology.</p>
-                    <button class="btn btn-link btn-arrow">Learn more </button>
-                </div>
-
-                <div class="col-6">
-                    <img class="img-fluid" src="/assets/images/daigram-1.png" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="info-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-6 d-flex flex-row align-items-center justify-content-start">
-                    <img class="img-fluid" src="/assets/images/daigram-2.png" alt="">
-                </div>
-
-                <div class="col-6">
-                    <h1 class="underline-heading">Faster than anything you've seen, at data-lake scale</h1>
-                    <p class="grey-desc">Deliver sub-second and highly concurrent analytics experiences over big and granular data, fueled by Baltoro's storage and compute-optimized technology.</p>
-                    <button class="btn btn-link btn-arrow">Learn more </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="info-section goals-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <ul class="nav nav-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Integrated</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Collaborative</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Sacle</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                            <h1 class="underline-heading">Set goals and crush them faster.</h1>
-                            <p class="desc">Stay on track to hit your goals with targets for task completions, numbers, monetary values and more. Track progress in real-time connecting tasks to goals and keep your objectives organized with Goal Folders.</p>
-                            <button class="btn btn-outline-dark border-2 rounded-pill">GET STARTED</button>
+    <div class="bg-light grey-area p-4 pt-5 container">
+        <!-- Section -->
+        <section class="info-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-xxl-6 col-12">
+                        <img class="img-fluid" src="assets/images/Luxurious .png" alt="">
+                    </div>
+                    <div
+                        class="content col-xl-5 col-xxl-6 col-12 d-flex flex-column justify-content-start align-items-start">
+                        <div class="heading-block bg-danger margin-left">
+                            <h2>Luxurious Rooms and Suites</h2>
                         </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <h1 class="underline-heading">Set goals and crush them faster.</h1>
-                            <p class="desc">Stay on track to hit your goals with targets for task completions, numbers, monetary values and more. Track progress in real-time connecting tasks to goals and keep your objectives organized with Goal Folders.</p>
-                            <button class="btn btn-outline-dark border-2 rounded-pill">GET STARTED</button>
-                        </div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-                            <h1 class="underline-heading">Set goals and crush them faster.</h1>
-                            <p class="desc">Stay on track to hit your goals with targets for task completions, numbers, monetary values and more. Track progress in real-time connecting tasks to goals and keep your objectives organized with Goal Folders.</p>
-                            <button class="btn btn-outline-dark border-2 rounded-pill">GET STARTED</button>
-                        </div>
+                        <p class="text-center text-20">Experience the ultimate in comfort and luxury in our meticulously
+                            designed
+                            rooms and
+                            suites.
+                            Plush bedding, high-quality
+                            linens, and modern amenities such as flat-screen TVs, high-speed
+                            internet,
+                            and
+                            mini-fridges
+                            await you.
+                        </p>
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 d-flex flex-row align-items-center justify-content-start">
-                    <img class="img-fluid" src="/assets/images/goals-img.png" alt="">
-                </div>
             </div>
-        </div>
+        </section>
 
-    </section>
-
-
-    <section class="info-section platform-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-12 d-flex flex-row align-items-center justify-content-start">
-                    <h1 class="display-2 fw-bold">Our Platform, <br> Endless Solution</h1>
-                </div>
-                <div class="col-lg-6 col-12">
-                    <div class="row">
-                        <div class="col-12 col-lg-4  d-flex flex-column align-items-start justify-content-start">
-                            <h2 class="d-flex flex-row align-items-center justify-content-start fs-4"><i class="bi bi-building me-1"></i> Build</h2>
-                            <p class="mb-1">Deliver sub-second and highly concurrent analytics experiences over big and granular data, fueled by Baltoro’s storage and compute-optimized technology.</p>
-                            <button class="btn btn-link text-dark fw-bold text-decoration-none p-0 fs-5">Learn more</button>
+        <!-- Section -->
+        <section class="info-section">
+            <div class="container">
+                <div class="row">
+                    <div
+                        class=" content col-xl-5 col-xxl-6 col-12 d-flex order-xl-1 order-2 flex-column justify-content-start align-items-center">
+                        <div class="heading-block bg-black margin-right">
+                            <h2>Relax at our Spa</h2>
                         </div>
-
-                        <div class="col-12 col-lg-4  d-flex flex-column align-items-start justify-content-start">
-                            <h2 class="d-flex flex-row align-items-center justify-content-start fs-4"><i class="bi bi-play me-1"></i> Run</h2>
-                            <p class="mb-1">Deliver sub-second and highly concurrent analytics experiences over big and granular data, fueled by Baltoro’s storage and compute-optimized technology.</p>
-                            <button class="btn btn-link text-dark fw-bold text-decoration-none p-0 fs-5">Learn more</button>
-                        </div>
-
-                        <div class="col-12 col-lg-4  d-flex flex-column align-items-start justify-content-start">
-                            <h2 class="d-flex flex-row align-items-center justify-content-start fs-4"><i class="bi bi-gear me-1"></i>Maintain</h2>
-                            <p class="mb-1">Deliver sub-second and highly concurrent analytics experiences over big and granular data, fueled by Baltoro’s storage and compute-optimized technology.</p>
-                            <button class="btn btn-link text-dark fw-bold text-decoration-none p-0 fs-5">Learn more</button>
-                        </div>
+                        <p class="text-center text-20">
+                            Indulge in a world of relaxation and rejuvenation at our spa.
+                            Our experienced therapists offer a range
+                            of treatments to leave you feeling
+                            refreshed and renewed.
+                        </p>
+                    </div>
+                    <div class="col-xl-7 col-xxl-6 col-12 order-xl-2 order-1">
+                        <img class="img-fluid" src="assets/images/Relax .png" alt="">
                     </div>
                 </div>
-
             </div>
-        </div>
+        </section>
 
-    </section>
-
-    <section class="info-section lets-talk">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-12 d-flex flex-column align-items-center justify-content-center">
-                    <h2 class="fs-1 text-dark mb-4 col-7 text-center fw-bold">
-                        Want to see how Baltoro can help simplify your ML / AI
-                    </h2>
-                    <button class="btn btn-dark border-2 rounded-pill px-5">LET'S TALK</button>
-
+        <!-- Section -->
+        <section class="info-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7 col-xxl-6 col-12">
+                        <img class="img-fluid" src="assets/images/Take .png" alt="">
+                    </div>
+                    <div
+                        class="content col-xl-5 col-xxl-6 col-12 d-flex flex-column justify-content-start align-items-start">
+                        <div class="heading-block bg-danger margin-left">
+                            <h2>Luxurious Rooms and Suites</h2>
+                        </div>
+                        <p class="text-center text-20">Take a dip in our sparkling swimming pool and soak up the magical
+                            atmosphere. Lounge on the sun deck and enjoy a refreshing drink from our poolside bar.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-    </section>
+        <!-- Section -->
+        <section class="info-section">
+            <div class="container">
+                <div class="row">
+                    <div
+                        class=" content col-xl-5 col-xxl-6 col-12 d-flex order-xl-1 order-2 flex-column justify-content-start align-items-center">
+                        <div class="heading-block bg-black margin-right">
+                            <h2>Relax at our Spa</h2>
+                        </div>
+                        <p class="text-center text-20">
+                            Our restaurant offers an exquisite culinary experience that will tantalize your taste buds.
+                            With a menu featuring the freshest ingredients, our chefs create culinary magic that will
+                            leave you wanting more.
+                        </p>
+                    </div>
+                    <div class="col-xl-7 col-xxl-6 col-12 order-xl-2 order-1">
+                        <img class="img-fluid" src="assets/images/Exquisite.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="footer-wrapper">
+        <!-- Review Sections -->
+        <section class="review-sections pt-5">
+            <h2 class="text-center my-5 text-black fw-bold">Discover Why Our Guests Love BITS INN</h2>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-4 position-relative review-block">
+                        <img class="img-fluid qoute-top" src="assets/images/quote.png" alt="">
+                        <div class="">
+                            <h4 class="mb-4 text-black fw-bold">John D.</h4>
+                            <p class="text-18 m-0 px-2">I've stayed in many luxury hotels, but the web portal at BITS INN truly
+                                sets it apart.
+                                From ordering room service to booking spa treatments, everything was just a few clicks
+                                away.
+                                The staff was also incredibly accommodating and made me feel right at home.
+                            </p>
+                        </div>
+
+                        <img class="img-fluid qoute-bottom" src="assets/images/qoute-inverted.png" alt="">
+                    </div>
+                    <div class="col-3">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- <div class="footer-wrapper">
         <div class="container pb-4">
             <div class="row align-items-start">
                 <div class="col-2 d-flex align-items-center justify-content-start">
@@ -170,7 +205,7 @@
                         <img class="img-fluid" src="../assets/images/logo.png" alt="">
                     </div>
                 </div>
-    
+
                 <div class="col-3 d-flex align-items-center justify-content-start">
                     <div>
                         <h3 class="list-heading">PRODUCT</h3>
@@ -182,38 +217,38 @@
                             </li>
                             <li>
                                 <a href="">
-                                     PRODUCT OVERVIEW 
+                                    PRODUCT OVERVIEW
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    WHY BALTORO 
+                                    WHY BALTORO
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    PRICING 
+                                    PRICING
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    PERFORMANCE AT SCALE 
+                                    PERFORMANCE AT SCALE
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    ELASTICITY 
+                                    ELASTICITY
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    SEMI STRUCTURED ANALYTICS 
+                                    SEMI STRUCTURED ANALYTICS
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </div>
-    
+
                 <div class="col-3 d-flex align-items-center justify-content-start">
                     <div>
                         <h3 class="list-heading">RESOURCES</h3>
@@ -225,24 +260,24 @@
                             </li>
                             <li>
                                 <a href="">
-                                     PRODUCT OVERVIEW 
+                                    PRODUCT OVERVIEW
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    WHY BALTORO 
+                                    WHY BALTORO
                                 </a>
                             </li>
                             <li>
                                 <a href="">
-                                    PRICING 
+                                    PRICING
                                 </a>
                             </li>
-    
+
                         </ul>
                     </div>
                 </div>
-    
+
                 <div class="col-2 d-flex align-items-center justify-content-start">
                     <div>
                         <h3 class="list-heading">COMPANY</h3>
@@ -254,7 +289,7 @@
                             </li>
                             <li>
                                 <a href="">
-                                     CONTACT US
+                                    CONTACT US
                                 </a>
                             </li>
                             <li>
@@ -262,11 +297,11 @@
                                     CAREERS
                                 </a>
                             </li>
-    
+
                         </ul>
                     </div>
                 </div>
-    
+
                 <div class="col-2 d-flex align-items-center justify-content-start">
                     <div>
                         <h3 class="list-heading">SOCIAL MEDIA</h3>
@@ -294,13 +329,13 @@
                                     <i class="bi bi-youtube"></i>
                                 </a>
                             </li>
-    
+
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    
+
         <div class="container sub-footer">
             <div class="row">
                 <div class="col-4">
@@ -316,7 +351,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </body>
 
 </html>
