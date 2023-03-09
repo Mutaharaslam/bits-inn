@@ -14,44 +14,13 @@
     border-radius: calculateRem(0px);
 }
 
-h1.underline-heading {
-    position: relative;
-    padding-bottom: 20px;
-    &::after {
-        content: "";
-        width: 40%;
-        height: 8px;
-        background-color: rgba($warning, 1);
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
-}
 
-p.grey-desc {
-    font-size: 20px;
-    line-height: 1.2;
-    color: rgba($secondary, 0.6);
-}
 
-button.btn-arrow {
-    font-size: 20px;
-    line-height: 1.2;
-    font-weight: 700;
-    color: rgba($dark, 1);
-    position: relative;
-    padding: 0px 5px;
-    text-decoration: none;
-    &::after {
-        content: "➙";
-        background-color: transparent;
-        color: #212529;
-        position: absolute;
-        left: 100%;
-        top: 60%;
-        transform: translateY(-50%);
-        height: 10px;
-        display: flex;
-        align-items: center;
-    }
-}
+.fade-in {
+    animation: fadeIn 2.5s;
+  }
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

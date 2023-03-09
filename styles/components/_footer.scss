@@ -1,73 +1,41 @@
 .footer-wrapper {
     background-color: #0C1724;
-    padding: 50px 0 0;
+    padding: 50px 0 100px;
+    position: relative;
     .footer-logo {
         max-width: 150px;
     }
-    .list-heading {
-        color: rgba($white, 1);
-        font-weight: 700;
-        padding: 10px 0;
-        margin: 0 0 20px;
-        position: relative;
-        font-size: 20px;
-        display: inline-block;
-        &::after {
-            content: "";
-            width: 40%;
-            height: 3px;
-            background-color: #FE095C;
-            border-radius: 5px;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            opacity: 1;
-            transition: 0.5s all;
-            @include tabletOnly {
-                left: 0;
-                transform: translateX(0%);
-            }
-        }
-    }
-    ul {
-        list-style: none;
-        padding: 0;
-        li {
-            padding: 0;
-            color: rgba($white, 1);
-            margin: 0 0 20px;
-            a {
-                text-decoration: none;
-                font-size: 14px;
-            }
-        }
-    }
+
     .social-media-list {
         display: flex;
         align-items: center;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-between;
         margin: 10px -5px;
+        list-style: none;
+        padding: 0;
+        @include tabletOnly {
+            justify-content: flex-start;
+        }
         li {
             padding: 0;
             color: rgba($warning, 0.8);
-            margin: 0 5px;
+            margin: 0 15px;
             a {
                 text-decoration: none;
                 font-size: 19px;
+                color: $white;
             }
         }
     }
-    .sub-footer {
-        border-top: 1px solid rgba($white, 0.1);
-        padding: 20px 0;
-        a,
-        p {
-            color: rgba($white, 1);
-            font-size: 14px;
-        }
-        a {
-            font-weight: 600;
+
+    .move-to-top{
+        position: absolute;
+        right: 100px;
+        bottom: 50px;
+        @include tabletOnly {
+            right: 30px;
+        bottom: 30px;
         }
     }
 }
