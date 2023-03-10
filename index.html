@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="dist/output.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <!-- <script language="javascript" type="text/javascript"
         src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
 </head>
@@ -35,7 +38,7 @@
             </div>
         </div>
     </section>
-    <section class="container banner-form fade-in">
+    <section class="container banner-form">
         <div class="row justify-content-center">
             <div class="col-md-9 col-sm-11 col-12">
                 <div class="form-holder shadow-lg d-flex justify-content-center">
@@ -78,7 +81,7 @@
 
     <div class="bg-light grey-area p-4 pt-5 container">
         <!-- Section -->
-        <section class="info-section fade-in">
+        <section class="info-section scroll-element js-scroll fade-in-bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-7 col-xxl-6 col-12">
@@ -106,7 +109,7 @@
         </section>
 
         <!-- Section -->
-        <section class="info-section fade-in">
+        <section class="info-section scroll-element js-scroll slide-in-left">
             <div class="container">
                 <div class="row">
                     <div
@@ -129,7 +132,7 @@
         </section>
 
         <!-- Section -->
-        <section class="info-section fade-in">
+        <section class="info-section scroll-element js-scrol fade-in-top">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-7 col-xxl-6 col-12">
@@ -149,7 +152,7 @@
         </section>
 
         <!-- Section -->
-        <section class="info-section">
+        <section class="info-section  scroll-element js-scrol fade-in-bottom">
             <div class="container">
                 <div class="row">
                     <div
@@ -175,7 +178,7 @@
             <h2 class="text-center my-5 pb-5 text-black fw-bold">Discover Why Our Guests Love BITS INN</h2>
 
             <!-- Review 1-->
-            <div class="container review">
+            <div class="container revie fade-in scroll-element js-scroll">
                 <div class="row justify-content-center">
                     <div class="col-xl-4 col-lg-6 col-md-7 position-relative review-block">
                         <img class="img-fluid qoute-top" src="assets/images/quote.png" alt="">
@@ -200,7 +203,7 @@
             </div>
 
             <!-- Review 2-->
-            <div class="container review">
+            <div class="container review fade-in scroll-element js-scroll">
                 <div class="row justify-content-center ">
                     <div class="col-xl-2 col-0"></div>
                     <div class="col-xl-3 col-lg-4 col-md-5 stars-block left order-md-1 order-2">
@@ -222,7 +225,7 @@
             </div>
 
             <!-- Review 3-->
-            <div class="container review">
+            <div class="container review fade-in scroll-element js-scroll">
                 <div class="row justify-content-center">
                     <div class="col-xl-4 col-lg-6 col-md-7 position-relative review-block">
                         <img class="img-fluid qoute-top" src="assets/images/quote.png" alt="">
@@ -243,7 +246,7 @@
             </div>
 
             <!-- Review -->
-            <div class="container review">
+            <div class="container review fade-in scroll-element js-scroll">
                 <div class="row justify-content-center ">
                     <div class="col-xl-2 col-0"></div>
                     <div class="col-xl-3 col-lg-4 col-md-5 stars-block left order-md-1 order-2">
@@ -292,7 +295,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-2 d-flex align-items-center justify-content-start order-lg-1 order-1 mb-5 mb-lg-0">
                     <div class="footer-logo">
-                        <img class="img-fluid" src="assets/images/bits-logo-footer.png" alt="">
+                        <a href="https://www.bitsarabia.com" class="btn p-0">
+                            <img class="img-fluid" src="assets/images/bits-logo-footer.png" alt="">
+                        </a>
                     </div>
                 </div>
 
@@ -301,8 +306,9 @@
                     <p class="m-0 ms-4 ms-md-7">2023. BITS Arabia. All rights Reserved</p>
                 </div>
 
-                <div class="col-lg-3 d-flex flex-lg-row flex-column  align-items-lg-center align-content-start justify-content-md-between justify-content-start order-lg-3 order-2 mb-5 mb-lg-0">
-                    <p class="m-0 me-6">Follow us on:</p>
+                <div
+                    class="col-lg-4 d-flex flex-lg-row flex-column  align-items-lg-center align-content-start justify-content-md-between justify-content-start order-lg-3 order-2 mb-5 mb-lg-0">
+                    <p class="m-0 me-4 text-16 text-white">Follow us on:</p>
                     <ul class="social-media-list">
                         <li>
                             <a href=""><i class="bi bi-instagram"></i></a>
@@ -328,6 +334,49 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const scrollElements = document.querySelectorAll(".js-scroll");
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop <=
+                (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const elementOutofView = (el) => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            return (
+                elementTop > (window.innerHeight || document.documentElement.clientHeight)
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add("scrolled");
+        };
+
+        const hideScrollElement = (element) => {
+            element.classList.remove("scrolled");
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.2)) {
+                    displayScrollElement(el);
+                } else if (elementOutofView(el)) {
+                    hideScrollElement(el)
+                }
+            })
+        }
+
+        window.addEventListener("scroll", () => {
+            handleScrollAnimation();
+        });
+    </script>
 </body>
 
 </html>

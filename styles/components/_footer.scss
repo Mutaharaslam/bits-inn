@@ -2,6 +2,7 @@
     background-color: #0C1724;
     padding: 50px 0 100px;
     position: relative;
+
     .footer-logo {
         max-width: 150px;
     }
@@ -14,13 +15,16 @@
         margin: 10px -5px;
         list-style: none;
         padding: 0;
+
         @include tabletOnly {
             justify-content: flex-start;
         }
+
         li {
             padding: 0;
             color: rgba($warning, 0.8);
-            margin: 0 15px;
+            margin: 0 20px;
+
             a {
                 text-decoration: none;
                 font-size: 19px;
@@ -29,13 +33,14 @@
         }
     }
 
-    .move-to-top{
+    .move-to-top {
         position: absolute;
         right: 100px;
         bottom: 50px;
+
         @include tabletOnly {
             right: 30px;
-        bottom: 30px;
+            bottom: 30px;
         }
     }
 }
